@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Counter App</title>
+    <style>
+      body {
+        background-color: rgb(226, 226, 126);
+      }
+      .counter-container {
+        text-align: center;
+        padding: 20px;
+        border: 5px solid black;
+        width: 600px;
+        height: 400px;
+        margin: auto;
+        background-color: beige;
+      }
+
+      .counter-value {
+        font-size: 80px;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .increase-btn,
+      .decrease-btn {
+        padding: 10px 20px;
+        font-size: 18px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      .increase-btn:hover,.decrease-btn:hover{
+        background-color: rgb(181, 181, 13);
+      }
+
+      .decrease-btn {
+        background-color: #f44336;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="counter-container">
+      <h1>COUNTER</h1>
+      <div class="counter-value">0</div>
+      <button class="increase-btn">Increase</button>
+      <button class="decrease-btn">Decrease</button>
+    </div>
+    <script>
+      const counterValue = document.querySelector(".counter-value");
+      const increaseBtn = document.querySelector(".increase-btn");
+      const decreaseBtn = document.querySelector(".decrease-btn");
+
+      let count = 0;
+
+      counterValue.textContent = count;
+
+      increaseBtn.addEventListener("click", () => {
+        count++;
+        counterValue.textContent = count;
+      });
+
+      decreaseBtn.addEventListener("click", () => {
+        count--;
+        counterValue.textContent = count;
+      });
+    </script>
+  </body>
+</html>
